@@ -17,6 +17,10 @@ class SearchViewController: BaseViewController {
     let searchController = UISearchController(searchResultsController: nil)
     override func viewDidLoad() {
         super.viewDidLoad()
+        let data = NetworkManager.shard.callSearchData("카카오")
+        data.bind(with: self) { owner, data in
+            print(data.results)
+        }
     }
     override func bindData() {
 //        searchController.searchBar.rx.text
