@@ -32,6 +32,7 @@
 		065952722C67524D0048821E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065952712C67524D0048821E /* NetworkManager.swift */; };
 		065952742C6752B50048821E /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065952732C6752B50048821E /* APIKey.swift */; };
 		065952762C67542A0048821E /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065952752C67542A0048821E /* APIError.swift */; };
+		065952782C67B0F70048821E /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065952772C67B0F70048821E /* SearchModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		065952712C67524D0048821E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		065952732C6752B50048821E /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		065952752C67542A0048821E /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		065952772C67B0F70048821E /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 		065952452C6728010048821E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				065952772C67B0F70048821E /* SearchModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				0659526C2C6744E40048821E /* SearchViewModel.swift in Sources */,
 				065952682C67437C0048821E /* SearchItemTableCell.swift in Sources */,
 				065952702C674E110048821E /* SearchDTO.swift in Sources */,
+				065952782C67B0F70048821E /* SearchModel.swift in Sources */,
 				065952442C6727F30048821E /* TabBarController.swift in Sources */,
 				065952722C67524D0048821E /* NetworkManager.swift in Sources */,
 				065952552C6741A80048821E /* ReuseIdentifier+.swift in Sources */,
