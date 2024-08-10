@@ -24,7 +24,6 @@ class BaseViewController: UIViewController {
     func setUpView() {}
     func bindData() {}
     func setUpNavLeft() {
-        self.navigationController?.navigationBar.topItem?.title = ""
         navigationController?.navigationBar.tintColor = .black
     }
 }

@@ -16,6 +16,19 @@
 		065952422C6727F30048821E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0659523C2C6727F30048821E /* BaseViewController.swift */; };
 		065952442C6727F30048821E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0659523E2C6727F30048821E /* TabBarController.swift */; };
 		065952492C6728830048821E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 065952482C6728830048821E /* .gitignore */; };
+		065952502C6729800048821E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0659524F2C6729800048821E /* SearchViewController.swift */; };
+		065952522C6729B30048821E /* ArcadeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065952512C6729B30048821E /* ArcadeViewController.swift */; };
+		065952552C6741A80048821E /* ReuseIdentifier+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065952542C6741A80048821E /* ReuseIdentifier+.swift */; };
+		065952582C6741F30048821E /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 065952572C6741F30048821E /* Then */; };
+		0659525B2C6742080048821E /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 0659525A2C6742080048821E /* RxCocoa */; };
+		0659525D2C6742080048821E /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0659525C2C6742080048821E /* RxSwift */; };
+		065952602C6742120048821E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0659525F2C6742120048821E /* Kingfisher */; };
+		065952632C67421A0048821E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 065952622C67421A0048821E /* SnapKit */; };
+		065952662C6742270048821E /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 065952652C6742270048821E /* IQKeyboardManagerSwift */; };
+		065952682C67437C0048821E /* SearchItemTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065952672C67437C0048821E /* SearchItemTableCell.swift */; };
+		0659526A2C6743C50048821E /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065952692C6743C50048821E /* BaseTableViewCell.swift */; };
+		0659526C2C6744E40048821E /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0659526B2C6744E40048821E /* SearchViewModel.swift */; };
+		065952702C674E110048821E /* SearchDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0659526F2C674E110048821E /* SearchDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +43,13 @@
 		0659523C2C6727F30048821E /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		0659523E2C6727F30048821E /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		065952482C6728830048821E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		0659524F2C6729800048821E /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		065952512C6729B30048821E /* ArcadeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcadeViewController.swift; sourceTree = "<group>"; };
+		065952542C6741A80048821E /* ReuseIdentifier+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReuseIdentifier+.swift"; sourceTree = "<group>"; };
+		065952672C67437C0048821E /* SearchItemTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchItemTableCell.swift; sourceTree = "<group>"; };
+		065952692C6743C50048821E /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		0659526B2C6744E40048821E /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		0659526F2C674E110048821E /* SearchDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +57,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				065952602C6742120048821E /* Kingfisher in Frameworks */,
+				0659525D2C6742080048821E /* RxSwift in Frameworks */,
+				0659525B2C6742080048821E /* RxCocoa in Frameworks */,
+				065952582C6741F30048821E /* Then in Frameworks */,
+				065952632C67421A0048821E /* SnapKit in Frameworks */,
+				065952662C6742270048821E /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,9 +91,10 @@
 			children = (
 				065952242C67276D0048821E /* AppDelegate.swift */,
 				065952262C67276D0048821E /* SceneDelegate.swift */,
+				065952532C67418D0048821E /* Extiones+ */,
+				0659524A2C6728AA0048821E /* Service */,
 				065952452C6728010048821E /* Model */,
 				065952462C6728060048821E /* VC */,
-				0659523F2C6727F30048821E /* Base */,
 				0659522D2C67276F0048821E /* Assets.xcassets */,
 				0659522F2C67276F0048821E /* LaunchScreen.storyboard */,
 				065952322C67276F0048821E /* Info.plist */,
@@ -78,10 +105,11 @@
 		0659523F2C6727F30048821E /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				0659523A2C6727F30048821E /* BaseCollectioViewCell.swift */,
 				0659523B2C6727F30048821E /* BaseView.swift */,
 				0659523C2C6727F30048821E /* BaseViewController.swift */,
 				0659523E2C6727F30048821E /* TabBarController.swift */,
+				065952692C6743C50048821E /* BaseTableViewCell.swift */,
+				0659523A2C6727F30048821E /* BaseCollectioViewCell.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -96,6 +124,11 @@
 		065952462C6728060048821E /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				0659523F2C6727F30048821E /* Base */,
+				0659524E2C6728F20048821E /* Search */,
+				0659524D2C6728D10048821E /* Arcade */,
+				0659524C2C6728CB0048821E /* App */,
+				0659524B2C6728C40048821E /* Game */,
 				065952472C6728350048821E /* Today */,
 			);
 			path = VC;
@@ -106,6 +139,54 @@
 			children = (
 			);
 			path = Today;
+			sourceTree = "<group>";
+		};
+		0659524A2C6728AA0048821E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				0659526F2C674E110048821E /* SearchDTO.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		0659524B2C6728C40048821E /* Game */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		0659524C2C6728CB0048821E /* App */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		0659524D2C6728D10048821E /* Arcade */ = {
+			isa = PBXGroup;
+			children = (
+				065952512C6729B30048821E /* ArcadeViewController.swift */,
+			);
+			path = Arcade;
+			sourceTree = "<group>";
+		};
+		0659524E2C6728F20048821E /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				0659524F2C6729800048821E /* SearchViewController.swift */,
+				0659526B2C6744E40048821E /* SearchViewModel.swift */,
+				065952672C67437C0048821E /* SearchItemTableCell.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		065952532C67418D0048821E /* Extiones+ */ = {
+			isa = PBXGroup;
+			children = (
+				065952542C6741A80048821E /* ReuseIdentifier+.swift */,
+			);
+			path = "Extiones+";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +205,14 @@
 			dependencies = (
 			);
 			name = AppstoreProject;
+			packageProductDependencies = (
+				065952572C6741F30048821E /* Then */,
+				0659525A2C6742080048821E /* RxCocoa */,
+				0659525C2C6742080048821E /* RxSwift */,
+				0659525F2C6742120048821E /* Kingfisher */,
+				065952622C67421A0048821E /* SnapKit */,
+				065952652C6742270048821E /* IQKeyboardManagerSwift */,
+			);
 			productName = AppstoreProject;
 			productReference = 065952212C67276D0048821E /* AppstoreProject.app */;
 			productType = "com.apple.product-type.application";
@@ -152,6 +241,13 @@
 				Base,
 			);
 			mainGroup = 065952182C67276D0048821E;
+			packageReferences = (
+				065952562C6741F30048821E /* XCRemoteSwiftPackageReference "Then" */,
+				065952592C6742080048821E /* XCRemoteSwiftPackageReference "RxSwift" */,
+				0659525E2C6742120048821E /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				065952612C67421A0048821E /* XCRemoteSwiftPackageReference "SnapKit" */,
+				065952642C6742270048821E /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
 			productRefGroup = 065952222C67276D0048821E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -180,9 +276,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				065952422C6727F30048821E /* BaseViewController.swift in Sources */,
+				065952502C6729800048821E /* SearchViewController.swift in Sources */,
 				065952402C6727F30048821E /* BaseCollectioViewCell.swift in Sources */,
 				065952252C67276D0048821E /* AppDelegate.swift in Sources */,
+				065952522C6729B30048821E /* ArcadeViewController.swift in Sources */,
+				0659526A2C6743C50048821E /* BaseTableViewCell.swift in Sources */,
+				0659526C2C6744E40048821E /* SearchViewModel.swift in Sources */,
+				065952682C67437C0048821E /* SearchItemTableCell.swift in Sources */,
+				065952702C674E110048821E /* SearchDTO.swift in Sources */,
 				065952442C6727F30048821E /* TabBarController.swift in Sources */,
+				065952552C6741A80048821E /* ReuseIdentifier+.swift in Sources */,
 				065952272C67276D0048821E /* SceneDelegate.swift in Sources */,
 				065952412C6727F30048821E /* BaseView.swift in Sources */,
 			);
@@ -407,6 +510,82 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		065952562C6741F30048821E /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		065952592C6742080048821E /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.7.1;
+			};
+		};
+		0659525E2C6742120048821E /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.12.0;
+			};
+		};
+		065952612C67421A0048821E /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		065952642C6742270048821E /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		065952572C6741F30048821E /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 065952562C6741F30048821E /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+		0659525A2C6742080048821E /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 065952592C6742080048821E /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		0659525C2C6742080048821E /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 065952592C6742080048821E /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		0659525F2C6742120048821E /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0659525E2C6742120048821E /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		065952622C67421A0048821E /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 065952612C67421A0048821E /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		065952652C6742270048821E /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 065952642C6742270048821E /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 065952192C67276D0048821E /* Project object */;
 }
