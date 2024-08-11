@@ -12,17 +12,5 @@ import RxCocoa
 class DetailSearchViewModel {
     let disposeBag = DisposeBag()
     let model = BehaviorRelay<Results?>(value: nil)
-//    struct Input {
-//        let viewdidLoad: PublishRelay<Void>
-//    }
-//    struct Output {
-//        let data: Observable<Results>
-//    }
-//    func transform() -> Output {
-//        let data = model.compactMap {$0}
-//        
-//        
-//        
-//        return Output(data: data.asObservable())
-//    }
+
 }

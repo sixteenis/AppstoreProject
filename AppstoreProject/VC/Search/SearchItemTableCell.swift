@@ -155,15 +155,3 @@ class SearchItemTableCell: BaseTableViewCell {
     }
     
 }
-private extension SearchItemTableCell {
-    func getImage(_ imageView: UIImageView, url: String){
-        let url = URL(string: url)!
-        imageView.kf.indicatorType = .activity
-        imageView.kf.setImage(
-          with: url,
-          placeholder: nil,
-          options: [.transition(.fade(1.2))],
-          completionHandler: nil
-        )
-    }
-}

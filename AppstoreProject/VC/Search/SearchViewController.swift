@@ -18,8 +18,6 @@ class SearchViewController: BaseViewController {
     let tableView = UITableView().then {
         $0.rowHeight = 350
         $0.separatorStyle = .none
-        
-        
     }
     let searchController = UISearchController(searchResultsController: nil)
     override func viewDidLoad() {
