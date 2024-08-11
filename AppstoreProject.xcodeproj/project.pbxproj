@@ -33,6 +33,7 @@
 		065952742C6752B50048821E /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065952732C6752B50048821E /* APIKey.swift */; };
 		065952762C67542A0048821E /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065952752C67542A0048821E /* APIError.swift */; };
 		065952782C67B0F70048821E /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065952772C67B0F70048821E /* SearchModel.swift */; };
+		0659527A2C68B6600048821E /* DetailSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065952792C68B6600048821E /* DetailSearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		065952732C6752B50048821E /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		065952752C67542A0048821E /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		065952772C67B0F70048821E /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
+		065952792C68B6600048821E /* DetailSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +191,7 @@
 				0659524F2C6729800048821E /* SearchViewController.swift */,
 				0659526B2C6744E40048821E /* SearchViewModel.swift */,
 				065952672C67437C0048821E /* SearchItemTableCell.swift */,
+				065952792C68B6600048821E /* DetailSearchViewController.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				065952442C6727F30048821E /* TabBarController.swift in Sources */,
 				065952722C67524D0048821E /* NetworkManager.swift in Sources */,
 				065952552C6741A80048821E /* ReuseIdentifier+.swift in Sources */,
+				0659527A2C68B6600048821E /* DetailSearchViewController.swift in Sources */,
 				065952762C67542A0048821E /* APIError.swift in Sources */,
 				065952272C67276D0048821E /* SceneDelegate.swift in Sources */,
 				065952412C6727F30048821E /* BaseView.swift in Sources */,

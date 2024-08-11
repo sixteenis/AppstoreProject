@@ -10,7 +10,7 @@ import Foundation
 struct SearchModel {
     let name: String
     let imageurl: [String]
-    let sellerName: String
+    let artistName: String
     let genres: [String]
     let userRating: Double
     let releaseNotes: String
@@ -19,7 +19,7 @@ struct SearchModel {
     init(_ dto: Results) {
         self.name = dto.trackName
         self.imageurl = dto.screenshotUrls
-        self.sellerName = dto.sellerName
+        self.artistName = dto.artistName
         self.genres = dto.genres
         self.userRating = dto.averageUserRating
         self.releaseNotes = dto.releaseNotes

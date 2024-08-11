@@ -16,15 +16,14 @@ class SearchViewController: BaseViewController {
     let disposeBag = DisposeBag()
     let vm = SearchViewModel()
     let tableView = UITableView().then {
-        $0.rowHeight = 330
+        $0.rowHeight = 350
+        $0.separatorStyle = .none
+        
+        
     }
     let searchController = UISearchController(searchResultsController: nil)
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let data = NetworkManager.shard.callSearchData("카카오")
-//        data.bind(with: self) { owner, data in
-//            print(data.results)
-//        }
     }
     override func bindData() {
         let searchTap = searchController.searchBar.rx.searchButtonClicked
@@ -32,20 +31,17 @@ class SearchViewController: BaseViewController {
             .distinctUntilChanged()
         let input = SearchViewModel.Input(searchButtinTap: searchTap)
         let output = vm.transform(input: input)
+        
         output.appList
             .bind(to: tableView.rx.items(cellIdentifier: SearchItemTableCell.id, cellType: SearchItemTableCell.self)) { (row, element, cell) in
                 cell.upDateView(element)
             }.disposed(by: disposeBag)
-//        list
-//            
-//                cell.title.text = element
-//                cell.itemImage.image = UIImage(systemName: "star")
-//                cell.userRating.text = "4.5"
-//                cell.genres.text = "asdasdasd"
-//                cell.screenImage1.image = UIImage(systemName: "star")
-//                cell.screenImage2.image = UIImage(systemName: "star")
-//                cell.screenImage3.image = UIImage(systemName: "star")
-//            }.disposed(by: disposeBag)
+        
+        tableView.rx.itemSelected
+            .bind(with: self) { owner, index in
+                print(index)
+            }.disposed(by: disposeBag)
+        
     }
     override func setUpHierarchy() {
         view.addSubview(tableView)
