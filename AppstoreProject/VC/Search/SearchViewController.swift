@@ -37,9 +37,11 @@ class SearchViewController: BaseViewController {
                 cell.upDateView(element)
             }.disposed(by: disposeBag)
         
-        tableView.rx.itemSelected
-            .bind(with: self) { owner, index in
-                print(index)
+        tableView.rx.modelSelected(Results.self)
+            .bind(with: self) { owner, data in
+                let vc = DetailSearchViewController()
+                vc.vm.model.accept(data)
+                owner.navigationController?.pushViewController(vc, animated: true)
             }.disposed(by: disposeBag)
         
     }

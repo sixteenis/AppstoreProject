@@ -14,6 +14,9 @@ import Then
 import Kingfisher
 
 class DetailSearchViewController: BaseViewController {
+    let disposeBag = DisposeBag()
+    var vm = DetailSearchViewModel()
+    
     let scrollView = UIScrollView().then {
         $0.backgroundColor = .white
     }
@@ -63,7 +66,16 @@ class DetailSearchViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpContentViewLayout()
-        updateView()
+    }
+    override func bindData() {
+        //let input = DetailSearchViewModel.Input(viewdidLoad: self.rx.viewDidAppear.map{_ in})
+//        let output = vm?.transform()
+//        guard let output else {return}
+        vm.model
+            .bind(with: self) { owner, result in
+                owner.updateView(result!)
+            }.disposed(by: disposeBag)
+            
     }
     override func setUpHierarchy() {
         view.addSubview(scrollView)
@@ -126,13 +138,25 @@ class DetailSearchViewController: BaseViewController {
     override func setUpView() {
         contentView.backgroundColor = .white
     }
-    func updateView() {
-        itemImage.image = UIImage(systemName: "star")
-        itemTitle.text = "감자국"
-        artistNameLabel.text = "감자국 회사"
-        releaseNote.text = "alskdjklasjdkzjvkxchvkzxjchvkljzxhcvkjhzxckjvhxckjvhkxjcvhkjxcvhzxckvjhzx\nzxkljclkjahdsoigfahsdlkjfhjasdlkjfhasdkljfhaskdljfhalskjdfhakjsdf\nkaㅓㄴ이ㅏㄴㅇㄴ얼;ㅣㅏㅁ넝ㄹ;ㅣㅏㄴ얼;ㅁㄴ어리;ㅏㅁ넝ㄹ;ㅓㅁㄴ암ㄴㅇ\nㅁ노아ㅓㅁ노아ㅓㅁ노아ㅓalskdjklasjdkzjvkxchvkzxjchvkljzxhcvkjhzxckjvhxckjvhkxjcvhkjxcvhzxckvjhzx\nzxkljclkjahdsoigfahsdlkjfhjasdlkjfhasdkljfhaskdljfhalskjdfhakjsdf\nkaㅓㄴ이ㅏㄴㅇㄴ얼;ㅣㅏㅁ넝ㄹ;ㅣㅏㄴ얼;ㅁㄴ어리;ㅏㅁ넝ㄹ;ㅓㅁㄴ암ㄴㅇ\nㅁ노아ㅓㅁ노아ㅓㅁ노아ㅓalskdjklasjdkzjvkxchvkzxjchvkljzxhcvkjhzxckjvhxckjvhkxjcvhkjxcvhzxckvjhzx\nzxkljclkjahdsoigfahsdlkjfhjasdlkjfhasdkljfhaskdljfhalskjdfhakjsdf\nkaㅓㄴ이ㅏㄴㅇㄴ얼;ㅣㅏㅁ넝ㄹ;ㅣㅏㄴ얼;ㅁㄴ어리;ㅏㅁ넝ㄹ;ㅓㅁㄴ암ㄴㅇ\nㅁ노아ㅓㅁ노아ㅓㅁ노아ㅓalskdjklasjdkzjvkxchvkzxjchvkljzxhcvkjhzxckjvhxckjvhkxjcvhkjxcvhzxckvjhzx\nzxkljclkjahdsoigfahsdlkjfhjasdlkjfhasdkljfhaskdljfhalskjdfhakjsdf\nkaㅓㄴ이ㅏㄴㅇㄴ얼;ㅣㅏㅁ넝ㄹ;ㅣㅏㄴ얼;ㅁㄴ어리;ㅏㅁ넝ㄹ;ㅓㅁㄴ암ㄴㅇ\nㅁ노아ㅓㅁ노아ㅓㅁ노아ㅓalskdjklasjdkzjvkxchvkzxjchvkljzxhcvkjhzxckjvhxckjvhkxjcvhkjxcvhzxckvjhzx\nzxkljclkjahdsoigfahsdlkjfhjasdlkjfhasdkljfhaskdljfhalskjdfhakjsdf\nkaㅓㄴ이ㅏㄴㅇㄴ얼;ㅣㅏㅁ넝ㄹ;ㅣㅏㄴ얼;ㅁㄴ어리;ㅏㅁ넝ㄹ;ㅓㅁㄴ암ㄴㅇ\nㅁ노아ㅓㅁ노아ㅓㅁ노아ㅓalskdjklasjdkzjvkxchvkzxjchvkljzxhcvkjhzxckjvhxckjvhkxjcvhkjxcvhzxckvjhzx\nzxkljclkjahdsoigfahsdlkjfhjasdlkjfhasdkljfhaskdljfhalskjdfhakjsdf\nkaㅓㄴ이ㅏㄴㅇㄴ얼;ㅣㅏㅁ넝ㄹ;ㅣㅏㄴ얼;ㅁㄴ어리;ㅏㅁ넝ㄹ;ㅓㅁㄴ암ㄴㅇ\nㅁ노아ㅓㅁ노아ㅓㅁ노아ㅓ"
-        exImage.image = UIImage(systemName: "star")
-        descriptionView.text = "alskdjklasjdkzjvkxchvkzxjchvkljzxhcvkjhzxckjvhxckjvhkxjcvhkjxcvhzxckvjhzx\nzxkljclkjahdsoigfahsdlkjfhjasdlkjfhasdkljfhaskdljfhalskjdfhakjsdf\nkaㅓㄴ이ㅏㄴㅇㄴ얼;ㅣㅏㅁ넝ㄹ;ㅣㅏㄴ얼;ㅁㄴ어리;ㅏㅁ넝ㄹ;ㅓㅁㄴ암ㄴㅇ\nㅁ노아ㅓㅁ노아ㅓㅁ노아ㅓalskdjklasjdkzjvkxchvkzxjchvkljzxhcvkjhzxckjvhxckjvhkxjcvhkjxcvhzxckvjhzx\nzxkljclkjahdsoigfahsdlkjfhjasdlkjfhasdkljfhaskdljfhalskjdfhakjsdf\nkaㅓㄴ이ㅏㄴㅇㄴ얼;ㅣㅏㅁ넝ㄹ;ㅣㅏㄴ얼;ㅁㄴ어리;ㅏㅁ넝ㄹ;ㅓㅁㄴ암ㄴㅇ\nㅁ노아ㅓㅁ노아ㅓㅁ노아ㅓalskdjklasjdkzjvkxchvkzxjchvkljzxhcvkjhzxckjvhxckjvhkxjcvhkjxcvhzxckvjhzx\nzxkljclkjahdsoigfahsdlkjfhjasdlkjfhasdkljfhaskdljfhalskjdfhakjsdf\nkaㅓㄴ이ㅏㄴㅇㄴ얼;ㅣㅏㅁ넝ㄹ;ㅣㅏㄴ얼;ㅁㄴ어리;ㅏㅁ넝ㄹ;ㅓㅁㄴ암ㄴㅇ\nㅁ노아ㅓㅁ노아ㅓㅁ노아ㅓalskdjklasjdkzjvkxchvkzxjchvkljzxhcvkjhzxckjvhxckjvhkxjcvhkjxcvhzxckvjhzx\nzxkljclkjahdsoigfahsdlkjfhjasdlkjfhasdkljfhaskdljfhalskjdfhakjsdf\nkaㅓㄴ이ㅏㄴㅇㄴ얼;ㅣㅏㅁ넝ㄹ;ㅣㅏㄴ얼;ㅁㄴ어리;ㅏㅁ넝ㄹ;ㅓㅁㄴ암ㄴㅇ\nㅁ노아ㅓㅁ노아ㅓㅁ노아ㅓalskdjklasjdkzjvkxchvkzxjchvkljzxhcvkjhzxckjvhxckjvhkxjcvhkjxcvhzxckvjhzx\nzxkljclkjahdsoigfahsdlkjfhjasdlkjfhasdkljfhaskdljfhalskjdfhakjsdf\nkaㅓㄴ이ㅏㄴㅇㄴ얼;ㅣㅏㅁ넝ㄹ;ㅣㅏㄴ얼;ㅁㄴ어리;ㅏㅁ넝ㄹ;ㅓㅁㄴ암ㄴㅇ\nㅁ노아ㅓㅁ노아ㅓㅁ노아ㅓalskdjklasjdkzjvkxchvkzxjchvkljzxhcvkjhzxckjvhxckjvhkxjcvhkjxcvhzxckvjhzx\nzxkljclkjahdsoigfahsdlkjfhjasdlkjfhasdkljfhaskdljfhalskjdfhakjsdf\nkaㅓㄴ이ㅏㄴㅇㄴ얼;ㅣㅏㅁ넝ㄹ;ㅣㅏㄴ얼;ㅁㄴ어리;ㅏㅁ넝ㄹ;ㅓㅁㄴ암ㄴㅇ\nㅁ노아ㅓㅁ노아ㅓㅁ노아ㅓ"
+    func updateView(_ data: Results) {
+        getImage(itemImage, url: data.artworkUrl512)
+        itemTitle.text = data.trackName
+        artistNameLabel.text = data.artistName
+        releaseNote.text = data.releaseNotes
+        getImage(exImage, url: data.screenshotUrls[0])
+        descriptionView.text = data.description
         
+    }
+}
+private extension DetailSearchViewController {
+    func getImage(_ imageView: UIImageView, url: String){
+        let url = URL(string: url)!
+        imageView.kf.indicatorType = .activity
+        imageView.kf.setImage(
+          with: url,
+          placeholder: nil,
+          options: [.transition(.fade(1.2))],
+          completionHandler: nil
+        )
     }
 }
