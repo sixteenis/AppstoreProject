@@ -8,6 +8,7 @@
 import UIKit
 import Then
 import SnapKit
+import Kingfisher
 
 class SearchItemTableCell: BaseTableViewCell {
     let itemImage = UIImageView().then {
@@ -117,5 +118,23 @@ class SearchItemTableCell: BaseTableViewCell {
             make.height.equalTo(250)
         }
     }
+    func upDateView(_ data: Results) {
+        title.text = data.trackName
+        self.getImage(itemImage, url: data.artworkUrl512)
+        userRating.text = String(format: "%.1f", data.averageUserRating)
+        genres.text = data.genres.first!
+        //data.sellerName
+        
+        getImage(screenImage1, url: data.screenshotUrls[0])
+        getImage(screenImage2, url: data.screenshotUrls[1])
+        getImage(screenImage3, url: data.screenshotUrls[2])
+        
+    }
     
+}
+private extension SearchItemTableCell {
+    func getImage(_ imageView: UIImageView, url: String){
+        let url = URL(string: url)!
+        imageView.kf.setImage(with: url)
+    }
 }

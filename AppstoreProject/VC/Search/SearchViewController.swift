@@ -14,11 +14,11 @@ import SnapKit
 
 class SearchViewController: BaseViewController {
     let disposeBag = DisposeBag()
+    let vm = SearchViewModel()
     let tableView = UITableView().then {
         $0.rowHeight = 330
     }
     let searchController = UISearchController(searchResultsController: nil)
-    let list = Observable.just(["카카오","당근","냠냠이"])
     override func viewDidLoad() {
         super.viewDidLoad()
 //        let data = NetworkManager.shard.callSearchData("카카오")
@@ -27,20 +27,25 @@ class SearchViewController: BaseViewController {
 //        }
     }
     override func bindData() {
-//        searchController.searchBar.rx.text
-//            .bind(with: self) { ownwer, t in
-//                print(t)
-//            }
-        list
+        let searchTap = searchController.searchBar.rx.searchButtonClicked
+            .withLatestFrom(searchController.searchBar.rx.text.orEmpty)
+            .distinctUntilChanged()
+        let input = SearchViewModel.Input(searchButtinTap: searchTap)
+        let output = vm.transform(input: input)
+        output.appList
             .bind(to: tableView.rx.items(cellIdentifier: SearchItemTableCell.id, cellType: SearchItemTableCell.self)) { (row, element, cell) in
-                cell.title.text = element
-                cell.itemImage.image = UIImage(systemName: "star")
-                cell.userRating.text = "4.5"
-                cell.genres.text = "asdasdasd"
-                cell.screenImage1.image = UIImage(systemName: "star")
-                cell.screenImage2.image = UIImage(systemName: "star")
-                cell.screenImage3.image = UIImage(systemName: "star")
+                cell.upDateView(element)
             }.disposed(by: disposeBag)
+//        list
+//            
+//                cell.title.text = element
+//                cell.itemImage.image = UIImage(systemName: "star")
+//                cell.userRating.text = "4.5"
+//                cell.genres.text = "asdasdasd"
+//                cell.screenImage1.image = UIImage(systemName: "star")
+//                cell.screenImage2.image = UIImage(systemName: "star")
+//                cell.screenImage3.image = UIImage(systemName: "star")
+//            }.disposed(by: disposeBag)
     }
     override func setUpHierarchy() {
         view.addSubview(tableView)

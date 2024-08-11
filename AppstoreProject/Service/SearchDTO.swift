@@ -12,6 +12,7 @@ struct SearchDTO: Decodable {
 }
 
 struct Results: Decodable {
+    let artworkUrl512: String
     let trackName: String
     let screenshotUrls: [String]
     let sellerName: String
