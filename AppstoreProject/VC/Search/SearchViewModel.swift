@@ -19,13 +19,16 @@ class SearchViewModel {
         let appList: Observable<[Results]>
     }
     func transform(input: Input) -> Output {
-        var appList = PublishSubject<[Results]>()
+        let appList = PublishSubject<[Results]>()
         input.searchButtinTap
             .flatMap { NetworkManager.shard.callSearchData($0)}
             .subscribe(with: self) { owner, dto in
+                print("작동")
                 appList.onNext(dto.results)
+                
             }.disposed(by: disposeBag)
         return Output(appList: appList)
+        
     }
     
 }

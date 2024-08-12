@@ -33,7 +33,10 @@ class SearchViewController: BaseViewController {
         output.appList
             .bind(to: tableView.rx.items(cellIdentifier: SearchItemTableCell.id, cellType: SearchItemTableCell.self)) { (row, element, cell) in
                 cell.upDateView(element)
-            }.disposed(by: disposeBag)
+            }
+            .disposed(by: disposeBag)
+        
+            
         
         tableView.rx.modelSelected(Results.self)
             .bind(with: self) { owner, data in

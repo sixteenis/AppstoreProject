@@ -121,7 +121,7 @@ class DetailSearchViewController: BaseViewController {
         }
         screenCollection.snp.makeConstraints { make in
             make.top.equalTo(releaseNote.snp.bottom).offset(15)
-            make.height.equalTo(450)
+            make.height.equalTo(view.frame.height/2)
             make.horizontalEdges.equalToSuperview()
         }
         descriptionView.snp.makeConstraints { make in
@@ -145,7 +145,14 @@ class DetailSearchViewController: BaseViewController {
         getImage(itemImage, url: data.artworkUrl512)
         itemTitle.text = data.trackName
         artistNameLabel.text = data.artistName
-        releaseNote.text = "새로운 소식" + "\n\n" + "버전 \(data.version)" + "\n\n" + data.releaseNotes
+
+        let attributedString = NSMutableAttributedString(string: "새로운 소식", attributes: [
+                .font: UIFont.boldSystemFont(ofSize: 18) // 폰트 설정
+            ])
+
+        let normalText = "\n\n" + "버전 \(data.version)" + "\n\n" + data.releaseNotes
+        attributedString.append(NSAttributedString(string: normalText, attributes: [.font: UIFont.systemFont(ofSize: 13)]))
+        releaseNote.attributedText = attributedString
         descriptionView.text = data.description
     }
 }

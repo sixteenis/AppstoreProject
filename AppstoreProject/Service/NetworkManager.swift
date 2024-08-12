@@ -38,7 +38,7 @@ final class NetworkManager {
                 
             }.resume()
             return Disposables.create()
-        }
+        }.debug("통신")
         return result
     }
 }
