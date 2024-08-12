@@ -18,7 +18,6 @@ class ScreenCollectioCell: BaseCollectioViewCell {
         }
         image.layer.masksToBounds = true
         image.contentMode = .scaleAspectFit
-        
     }
     
     func updateImage(_ url: String) {

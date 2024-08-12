@@ -36,6 +36,7 @@
 		0659527A2C68B6600048821E /* DetailSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065952792C68B6600048821E /* DetailSearchViewController.swift */; };
 		0659527C2C68C0650048821E /* DetailSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0659527B2C68C0650048821E /* DetailSearchViewModel.swift */; };
 		0659527E2C68FFC40048821E /* ScreenCollectioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0659527D2C68FFC40048821E /* ScreenCollectioCell.swift */; };
+		065952872C6A4CD60048821E /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065952862C6A4CD60048821E /* BaseViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		065952792C68B6600048821E /* DetailSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSearchViewController.swift; sourceTree = "<group>"; };
 		0659527B2C68C0650048821E /* DetailSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSearchViewModel.swift; sourceTree = "<group>"; };
 		0659527D2C68FFC40048821E /* ScreenCollectioCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCollectioCell.swift; sourceTree = "<group>"; };
+		065952862C6A4CD60048821E /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				0659523E2C6727F30048821E /* TabBarController.swift */,
 				065952692C6743C50048821E /* BaseTableViewCell.swift */,
 				0659523A2C6727F30048821E /* BaseCollectioViewCell.swift */,
+				065952862C6A4CD60048821E /* BaseViewModel.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				065952552C6741A80048821E /* ReuseIdentifier+.swift in Sources */,
 				0659527A2C68B6600048821E /* DetailSearchViewController.swift in Sources */,
 				065952762C67542A0048821E /* APIError.swift in Sources */,
+				065952872C6A4CD60048821E /* BaseViewModel.swift in Sources */,
 				065952272C67276D0048821E /* SceneDelegate.swift in Sources */,
 				0659527E2C68FFC40048821E /* ScreenCollectioCell.swift in Sources */,
 				065952412C6727F30048821E /* BaseView.swift in Sources */,

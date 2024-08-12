@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class SearchViewModel {
+class SearchViewModel: BaseViewModel {
     let disposeBag = DisposeBag()
     
     struct Input {
@@ -21,7 +21,11 @@ class SearchViewModel {
     func transform(input: Input) -> Output {
         let appList = PublishSubject<[Results]>()
         input.searchButtinTap
-            .flatMap { NetworkManager.shard.callSearchData($0)}
+            .flatMap {
+                print($0)
+                appList.onNext([Results]())
+                return NetworkManager.shard.callSearchData($0)
+            }
             .subscribe(with: self) { owner, dto in
                 print("작동")
                 appList.onNext(dto.results)

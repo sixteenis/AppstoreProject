@@ -14,6 +14,7 @@ final class NetworkManager {
     private init() {}
     
     func callSearchData(_ search: String) -> Observable<SearchDTO> {
+        //https://itunes.apple.com/search
         let url = APIKey.baseURL + "?country=KR&term=\(search)&media=software"
         let result = Observable<SearchDTO>.create { observer in
             guard let url = URL(string: url) else {
